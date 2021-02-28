@@ -13,7 +13,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./checkout.component.css']
 })
 
-
 export class CheckoutComponent implements OnInit{
   addressForm: FormGroup;
   submitted = false;

@@ -14,8 +14,10 @@ declare var google: any;
 export class PizzaService {
   cartItems:any = []
   client:any
-  constructor(private http: HttpClient,private fns: AngularFireFunctions,private firestore: AngularFirestore,private mapsAPI : MapsAPILoader) { 
-   
+  constructor(private http: HttpClient,
+    private fns: AngularFireFunctions,
+    private firestore: AngularFirestore,
+    private mapsAPI : MapsAPILoader) { 
   }
 
   getPizzaSizes(): Observable<any> {
@@ -150,24 +152,28 @@ getListofLocations(){
         }),)
 }
 
-
 setProductDetails(product){
   localStorage.setItem('product-details',  JSON.stringify(product));
 }
+
 getProductDetails(){
   let details = localStorage.getItem('product-details');
   return JSON.parse(details);
 }
+
 saveCoupanInfo(coupanInfo){
   localStorage.setItem('coupan-details',  JSON.stringify(coupanInfo));
 }
+
 getCoupanInfo(){
   let details = localStorage.getItem('coupan-details');
   return JSON.parse(details);
 }
+
 deleteCoupan(){
   localStorage.removeItem('coupan-details');
 }
+
 saveOrderDetails(order){
   localStorage.setItem('order-details',  JSON.stringify(order));
 }
