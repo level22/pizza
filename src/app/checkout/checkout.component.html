@@ -329,15 +329,14 @@
                                     <ng-container *ngFor="let toppings of item.itemDescription">
                                       <small class="text-muted" >{{toppings.name }} ({{toppings.toppingType}})</small><br>
                                     </ng-container>
-                                   
                                 </div>
-                                <span class="text-muted">${{ item.price * item.quantity.toFixed(3) }}</span>
+                                <span class="text-muted">{{ item.price * item.quantity | currency }}</span>
                             </li>
                             <li class="list-group-item d-flex justify-content-between lh-condensed"> <div>
                               <h6 class="my-0">Tax</h6>
                             
                             </div>
-                            <span class="text-muted">${{ taxes?.toFixed(3) }}</span>
+                            <span class="text-muted">{{ taxes  | currency }}</span>
                             </li>
               
                             <li class="list-group-item d-flex justify-content-between bg-light" *ngIf="coupanApplied && coupanResponse.type=='percentage'">
@@ -356,13 +355,11 @@
                             </div>
                             <span class="text-success">${{ coupanResponse.value }} off</span>
                         </li>
-              
                             <li class="list-group-item d-flex justify-content-between">
                                 <span>Total (USD)</span>
-                                <strong>${{ finalPrice?.toFixed(3) }}</strong>
+                                <strong>{{ finalPrice | currency }}</strong>
                             </li>
                         </ul>
-                  
                     </div>
                     <div class="col-md-6 order-md-1">
                       <h4 class="mb-3">Pay with your card</h4>

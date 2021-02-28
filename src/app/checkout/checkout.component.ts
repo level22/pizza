@@ -68,7 +68,7 @@ export class CheckoutComponent implements OnInit{
       this.cartItems = this.pizzaService.getCartData();
 
       this.subTotal = this.pizzaService.getTotalPrice(this.cartItems)
-      this.taxes = (this.subTotal * taxValue/100)
+      this.taxes = (this.subTotal * taxValue)
       this.finalPrice =  this.subTotal + this.taxes;
       if(this.cartItems){
         for(var i=0; i<this.cartItems.length; i++){

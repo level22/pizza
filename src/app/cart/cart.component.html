@@ -46,7 +46,7 @@
                           <a href="javascript:void(0)" type="button" (click)="openRemovePizza(deleteItem,item)" class="card-link-secondary small text-uppercase mr-3"><i
                               class="fa fa-trash mr-1"></i> Remove item </a>
                         </div>
-                        <p class="mb-0"><span><strong id="summary">${{ item.price * item.quantity.toFixed(3) }}</strong></span></p> 
+                        <p class="mb-0"><span><strong id="summary">{{ item.price * item.quantity | currency }}</strong></span></p> 
                       </div>
                     </div>
                   </div>
@@ -73,13 +73,13 @@
             <ul class="list-group list-group-flush">
               <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
                 Sub Total
-                <span>${{ subTotal }}</span>
+                <span>{{ subTotal | currency}}</span>
               </li>
               
 
               <li class="list-group-item d-flex justify-content-between align-items-center px-0">
                 Tax
-                <span>${{ taxes.toFixed(3) }}</span>
+                <span>{{ taxes | currency}}</span>
               </li>
 
               <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0"  *ngIf="coupanApplied && coupanResponse.type=='percentage'"  style="color:green">Promotion Applied <span><b>{{ coupanResponse.value }}% off</b></span></li>
@@ -95,7 +95,7 @@
                 <div>
                   <strong>Order Total:</strong>
                 </div>
-                <span><strong>${{ finalPrice.toFixed(3) }}</strong></span>
+                <span><strong>{{ finalPrice | currency}}</strong></span>
               </li>
             </ul>
   

@@ -12,6 +12,7 @@
   "private": true,
   "dependencies": {
     "@agm/core": "^1.1.0",
+    "@angular-devkit/build-angular": "~0.901.15",
     "@angular/animations": "~9.1.13",
     "@angular/common": "~9.1.13",
     "@angular/compiler": "~9.1.13",
@@ -22,14 +23,13 @@
     "@angular/platform-browser": "~9.1.13",
     "@angular/platform-browser-dynamic": "~9.1.13",
     "@angular/router": "~9.1.13",
-    "@angular-devkit/build-angular": "~0.901.15",
     "@ng-bootstrap/ng-bootstrap": "~5.2.2",
     "bootstrap": "^4.6.0",
     "buffer": "^6.0.3",
     "crypto": "^1.0.1",
     "firebase": "^7.0.0",
-    "firebase-admin": "^9.4.2",
-    "firebase-functions": "^3.13.1",
+    "firebase-admin": "^9.5.0",
+    "firebase-functions": "^3.13.2",
     "rxjs": "~6.6.6",
     "square": "^8.1.1",
     "square-connect": "^6.20201216.0",
@@ -37,12 +37,13 @@
     "zone.js": "~0.10.3"
   },
   "devDependencies": {
-    "@angular/cli": "~9.1.15",
+    "@angular/cli": "^9.1.15",
     "@angular/compiler-cli": "~9.1.13",
     "@angular/language-service": "~9.1.13",
+    "@types/googlemaps": "^3.39.12",
     "@types/jasmine": "~3.3.8",
     "@types/jasminewd2": "~2.0.3",
-    "@types/node": "^8.9.5",
+    "@types/node": "^8.10.66",
     "codelyzer": "^5.0.0",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
@@ -54,7 +55,6 @@
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
-    "typescript": "~3.8.3",
-    "@types/googlemaps": "^3.39.12"
+    "typescript": "~3.8.3"
   }
 }
